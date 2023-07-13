@@ -73,7 +73,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   //fetch data from server
-  const response = await fetch("https://chatgptclone-xw52.onrender.com", {
+  const response = await fetch("https://chatgptclone-xw52.onrender.com/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -84,7 +84,7 @@ const handleSubmit = async (e) => {
   });
 
   clearInterval(loadInterval);
-  messageDiv.innerHTML = "";
+  messageDiv.innerHTML = " ";
 
   if (response.ok) {
     const data = await response.json();
